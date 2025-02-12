@@ -5,6 +5,8 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Home from "./components/Home";
 import DefaultLayout from "./components/DefaultLayout";
 import MoviePageDetails from "./components/MoviePageDetails";
+import NewFilm from "./components/NewFilm";
+import "bootstrap-icons/font/bootstrap-icons.css";
 
 
 function App() {
@@ -15,6 +17,7 @@ function App() {
           <Route path="/" element={<DefaultLayout />}>
             <Route index element={<Home />} />
             <Route path="movies/:id" element={<MoviePageDetails />} />
+            <Route path="/movies/create" element={<NewFilm />} />
           </Route>
         </Routes>
       </BrowserRouter>
@@ -22,4 +25,4 @@ function App() {
   );
 }
 
-export default App
+export default App;
